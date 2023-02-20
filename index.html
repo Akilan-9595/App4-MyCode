@@ -61,9 +61,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 				
         }
 	//type1 muscle fiber percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
-	function type1Percent(){
+		function type1Percent(){
 		let x = type1_count;
-		let y = (x / 8)*100;
+		let y = (x / 9)*100;
 		console.log(y);
 		//alert("type1percent" + y);//
 		document.getElementById("type1results").innerHTML = "Percentage of Slow Twitch (Type 1) Muscle Fibers =" + y + "%";
@@ -72,7 +72,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//type 2 muscle fiber percentage.....added variables to the functions......added counter to make sure it works....added the innerhtml to the function//
 	function type2Percent(){
 		let a = type2_count;
-		let b = (a / 8)*100;
+		let b = (a / 9)*100;
 		console.log(b);
 	        //alert("type2percent" + b)//
 		document.getElementById("type2results").innerHTML = "Percentage of Fast Twitch (type 2) Muscle Fibers =" + b + "%";
@@ -173,7 +173,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	.page:target {
 	    left: 0vw;
 	    z-index: 5;
-
+}
+	
 /* Page Six Styling (PAGE 6)*/
 .page {
     width: 100vw;
@@ -190,6 +191,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    left: 0vw;
 	    z-index: 5;
 
+}
+	
+/* Page Seven Styling (PAGE 7)*/
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+	
+	.page:target {
+	    left: 0vw;
+	    z-index: 5;
+}
 /* NUMERICAL RESULTS PAGE (PAGE 7)*/
 .page {
     width: 100vw;
@@ -205,10 +224,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	.page:target {
 	    left: 0vw;
 	    z-index: 6;	
-
+		
+}
+/*Resizable Image
 	img, object{
             	max-height:90%;
-        	max-width:90%;		
+        	max-width:90%;*/		
 
 
 </style>
@@ -247,6 +268,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!--Type 2 Button -->
 	<a href="#two" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Sprinting </a>
+	
+	<!--Type 2a Button -->
+	<a href="#two" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Mid Distance Running (ie 400m) </a>
 		
     	</div>	
 </div>
@@ -284,8 +308,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- Type 1 Button -->	
 	<a href="#four" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Cardio Machines </a>
 	
-	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types -->
-	<a href="#four" onclick="type2Add(); type1Add()" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Lifting Weights  </a>
+	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types...........I removed the calling of both add functions, because adding them doesn't change the percentages -->
+	<a href="#four" onlick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Lifting Weights  </a>
 		
 	</div>
 
@@ -307,7 +331,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- Type 2 Button -->
 	<a href="#five" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Low repitions, Heavy Weight </a>
 		
-	<!-- Type 1 and 2 Button -->
+	<!-- Type 1 and 2 Button-->
 	<a href="#five" onclick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a>
 	
 	</div>
@@ -350,9 +374,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	</div>
 
+<!-- PAGE Six -->
+<div class="page" id="seven">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<!-- Sixth Question -->
+	<div id="content" class="w3-container">
+		<p> What purpose do you / have been training for OR what do you think you what excel at faster</p>
+		
+	<!-- type2 Button -->	
+	<a href="#eight" onclick="type2Add(); type1Add()" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.) </a>
+	
+	<!-- type1 Button -->
+	<a href="#eight" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Powerlifting <br> (gaining strength) </a>
+	
+	</div>
+
 
 <!-- NUMERICAL RESULTS PAGE -->
-<div class="page" id="seven">
+<div class="page" id="eight">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
