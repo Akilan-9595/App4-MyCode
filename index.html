@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-d
+To determine the ratio of a person's muscle fibers based on the activites they have partook in the past.
  
 Known Issues:
-blah, blah, blah, blah
+This is not definitive as a muscle biopsy is the best and most reliable method to determine one's muscle fiber compostion.
 Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
 References:
@@ -36,90 +36,55 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<link rel="stylesheet" href="w3-colors-flat.css">
 </head> 
 
-<script>
-
-	//YOUR JAVASCRIPT GOES HERE
-
-</script>	
-
-
-<!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
-<style>	
-.body {
-     margin: 0em;
-}
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
-
-<body>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-
+<!--Javascript-->
 <script>
 	//starting counters before survey is filled out set to 0//
-        var allergy_count = 0;
-        var cold_count = 0;
+        var type1_count = 0;
+        var type2_count = 0;
 	
 	//for displaying the results//
 	var resultText = document.getElementById("results");
 	
-	// counter goes up by 1...added allergy counter to make sure function works//
-        function allergyAdd(){
-		allergy_count = allergy_count + 1;
-		console.log(allergy_count);
-		//alert("allergycount" + allergy_count);//
+	// counter goes up by 1...added alert to make sure function works//
+        function Type1Add(){
+		type1_count = type1_count + 1;
+		console.log(type1_count);
+		//alert("type1count" + type1_count);//
 		
         }
 	//counter goes up by 1 //
-        function coldAdd(){		
-            	cold_count = cold_count + 1;
-		console.log(cold_count);
-		//alert("coldcount" + cold_count);//
+        function Type2Add(){		
+            	type2_count = type2_count + 1;
+		console.log(type2_count);
+		//alert("type2count" + type2_count);//
 				
         }
-	//allergy percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
-	function allergyPercent(){
-		let x = allergy_count;
-		let y = (x / 6)*100;
+	//type1 muscle fiber percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
+	function type1Percent(){
+		let x = type1_count;
+		let y = (x / 8)*100;
 		console.log(y);
-		//alert("allergypercent" + y);//
-		document.getElementById("allergyresults").innerHTML = "Probability it is allergies =" + y + "%";
+		//alert("type1percent" + y);//
+		document.getElementById("type1results").innerHTML = "Percentage of Slow Twitch (Type 1) Muscle Fibers =" + y + "%";
 				
 	}
-	//cold percentage.....added variables to the functions......added counter to make sure it works....added the innerhtml to the function//
-	function coldPercent(){
-		let a = cold_count;
-		let b = (a / 6)*100;
+	//type 2 muscle fiber percentage.....added variables to the functions......added counter to make sure it works....added the innerhtml to the function//
+	function type2Percent(){
+		let a = type2_count;
+		let b = (a / 8)*100;
 		console.log(b);
-	        //alert("coldpercent" + b)//
-		document.getElementById("coldresults").innerHTML = "Prabobility it is allergies =" + b + "%";
+	        //alert("type2percent" + b)//
+		document.getElementById("type2results").innerHTML = "Percentage of Fast Twitch (type 2) Muscle Fibers =" + b + "%";
 		
 	}
-	
-		
-
-	
-	
 	
   </script>
 
 
 
+	
+	
 <style>	
 .body {
      margin: 0em;
@@ -241,7 +206,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    left: 0vw;
 	    z-index: 6;	
 
-	
+	img, object{
+            	max-height:90%;
+        	max-width:90%;		
 
 
 </style>
@@ -253,13 +220,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>The following questions will be used to calculate the percentage of your approximate Type 1 Muscle Fibers vs Type 2 Muscle Fibers.</p>
+	
+	<p>Type 1 Muscle Fibers are commonly called slow twitch muscle fibers used for endurance. Type 2 muscle fibers, also called fast twitch fibers, are used for speed and explosiveness. The ratio of these muscle fibers is determined both by genetics and training<p>
+	
+	<p>You will be asked a series of questions of what your strengths in athletic activies are to reveal at the end your approxiamate muscle fiber composition.</p> 
 	
 	<a href="#one" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION. CONSULT A SURGEON FOR A MUSCLE BIOPSY TO GET THE MOST ACCURATE RESULTS.</p>
 
 <!-- PAGE ONE -->	
 <div class="page" id="one">
@@ -269,13 +240,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- First Question -->
     	<div id="content" class="w3-container">
-        	<p>Are your eyes watery or itchy?</p>
+        	<p>Which type of running have you been strongest at / trained for throughout your life?</p>
 
-	<!-- YES Button -->	
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<!-- Type 1 Button -->	
+	<a href="#two" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Distance Running </a>
 	
-	<!--NO Button -->
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<!--Type 2 Button -->
+	<a href="#two" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Sprinting </a>
 		
     	</div>	
 </div>
@@ -288,13 +259,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- Second Question -->
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?.</p>
+		<p>If you were to train, which of the following methods of exercise would you perform best in?</p>
 		
-	<!-- YES Button -->	
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<!-- Type 2 Button -->	
+	<a href="#three" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Agility Training </a>
 	
-	<!-- NO Button -->
-	<a href="#three" onclick="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<!-- Type 1 Button -->
+	<a href="#three" onclick="type2Add();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> Cycling </a>
 		
 	</div>
 	
@@ -308,13 +279,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- Third Question -->
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
+		<p>When you go to the gym, what activity do you perform best in or partake in the most?</p>
 		
-	<!-- YES Button -->	
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<!-- Type 1 Button -->	
+	<a href="#four" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Cardio Machines </a>
 	
-	<!-- NO Button -->
-	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types -->
+	<a href="#four" onclick="type2Add(); type1Add()" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Lifting Weights  </a>
 		
 	</div>
 
@@ -328,13 +299,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- Fourth Question -->
 	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p>
+		<p>When you lift weights, how do you typically split the workout load?</p>
 		
-	<!-- YES Button -->	
-	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<!-- Type 1 Button -->	
+	<a href="#five" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> High repititions, Low Weight </a>
 	
-	<!-- NO Button -->
-	<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<!-- Type 2 Button -->
+	<a href="#five" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Low repitions, Heavy Weight </a>
+		
+	<!-- Type 1 and 2 Button -->
+	<a href="#five" onclick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a>
 	
 	</div>
 
@@ -348,13 +322,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- Fifth Question -->
 	<div id="content" class="w3-container">
-		<p>Do you have a wet, hacking cough?</p>
+		<p>Which activity would you be able to perform better in?</p>
 		
-	<!-- YES Button -->	
-	<a href="#six" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<!-- type 2 Button -->	
+	<a href="#six" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Swimming for 40 laps  </a>
 	
-	<!-- NO Button -->
-	<a href="#six" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<!-- type 1 Button -->
+	<a href="#six" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Jumping 24-28+ inches</a>
 	
 	</div>
 
@@ -366,30 +340,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- Sixth Question -->
 	<div id="content" class="w3-container">
-		<p>Have you had symptoms for more than 2 weeks?</p>
+		<p>What is your age?</p>
 		
-	<!-- YES Button -->	
-	<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<!-- type2 Button -->	
+	<a href="#seven" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Under 45 </a>
 	
-	<!-- NO Button -->
-	<a href="#seven" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<!-- type1 Button -->
+	<a href="#seven" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Over 45 </a>
 	
 	</div>
 
-<!-- RESULTS BUTTON PAGE 
-<div class="page" id="five">
-	<div class="w3-container w3-flat-carrot">
-		
-	</div>
-			
-	<!-- RESULTS Button and also removed the functions for calculating the averages 	
-	<a href="#six" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Results </a>
-	</div>
 
-</div> -->
-	
-<!-- Made the results button on the same page as the display results page... ignore the comment above --> 
-	
 <!-- NUMERICAL RESULTS PAGE -->
 <div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
@@ -397,10 +358,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<!-- Results Button.... changed name of results button to "results"-->
-	<input type="button" onclick="allergyPercent(); coldPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Result"> 
+	<input type="button" onclick="type1Percent(); type2Percent();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Result"> 
 	<!-- Variable Results Section -->
-	<div id="allergyresults"></div>
-	<div id="coldresults"></div>
+	<div id="type1results"></div>
+	<div id="type2results"></div>
 	
 	</div>
 	<!--Back to First Page Button
