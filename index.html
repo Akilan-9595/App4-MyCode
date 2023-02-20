@@ -63,7 +63,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//type1 muscle fiber percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
 		function type1Percent(){
 		let x = type1_count;
-		let y = (x / 8)*100;
+		let y = (x / 6)*100;
 		console.log(y);
 		//alert("type1percent" + y);//
 		document.getElementById("type1results").innerHTML = "Percentage of Slow Twitch (Type 1) Muscle Fibers =" + y + "%";
@@ -72,7 +72,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//type 2 muscle fiber percentage.....added variables to the functions......added counter to make sure it works....added the innerhtml to the function//
 	function type2Percent(){
 		let a = type2_count;
-		let b = (a / 8)*100;
+		let b = (a / 6)*100;
 		console.log(b);
 	        //alert("type2percent" + b)//
 		document.getElementById("type2results").innerHTML = "Percentage of Fast Twitch (type 2) Muscle Fibers =" + b + "%";
@@ -311,11 +311,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- Type 2 Button -->	
 	<a href="#four" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Powerlifting <br> (gaining strength) </a>
 	
-	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types-->
-	<a href="#four" onlick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Bodybuilding <br> (body building)  </a>
+	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio-->
+	<a href="#four" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Bodybuilding <br> (body building)  </a>
 	
-	<!-- Type 1/2 Button....sports results in an increase in both muscle fiber types-->
-	<a href="#four" onlick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.)  </a>
+	<!-- Type 1/2 Button....sports results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio-->
+	<a href="#four" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.)  </a>
 	</div>
 
 </div>
@@ -336,8 +336,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- Type 2 Button -->
 	<a href="#five" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Low repitions, Heavy Weight </a>
 		
-	<!-- Type 1 and 2 Button-->
-	<a href="#five" onclick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a>
+	<!-- Type 1 and 2 Button....deleted calling both functions becasue it didn't affect total percentage ratio-->
+	<a href="#five" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a>
 	
 	</div>
 
