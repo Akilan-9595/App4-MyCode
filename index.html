@@ -193,7 +193,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 }
 	
-/* Page Seven Styling (PAGE 7)*/
+/* Page Seven Styling (PAGE 7)
 .page {
     width: 100vw;
     height: 100vh;
@@ -208,7 +208,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	.page:target {
 	    left: 0vw;
 	    z-index: 5;
-}
+} 
 /* NUMERICAL RESULTS PAGE (PAGE 7)*/
 .page {
     width: 100vw;
@@ -308,9 +308,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- Type 1 Button -->	
 	<a href="#four" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Cardio Machines </a>
 	
-	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types...........I removed the calling of both add functions, because adding them doesn't change the percentages -->
-	<a href="#four" onlick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Lifting Weights  </a>
-		
+	<!-- Type 2 Button -->	
+	<a href="#four" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Powerlifting <br> (gaining strength) </a>
+	
+	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types-->
+	<a href="#four" onlick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Bodybuilding <br> (body building)  </a>
+	
+	<!-- Type 1/2 Button....sports results in an increase in both muscle fiber types-->
+	<a href="#four" onlick="type1Add(); type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.)  </a>
 	</div>
 
 </div>
@@ -374,27 +379,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	</div>
 
-<!-- PAGE Six -->
-<div class="page" id="seven">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
-	</div>
-	
-	<!-- Sixth Question -->
-	<div id="content" class="w3-container">
-		<p> What purpose do you / have been training for OR what do you think you what excel at faster</p>
-		
-	<!-- type2 Button -->	
-	<a href="#eight" onclick="type2Add(); type1Add()" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.) </a>
-	
-	<!-- type1 Button -->
-	<a href="#eight" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Powerlifting <br> (gaining strength) </a>
-	
-	</div>
-
 
 <!-- NUMERICAL RESULTS PAGE -->
-<div class="page" id="eight">
+<div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
