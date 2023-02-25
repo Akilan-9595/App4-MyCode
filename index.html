@@ -42,41 +42,61 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//starting counters before survey is filled out set to 0//
         var type1_count = 0;
         var type2_count = 0;
+	var i = 6;
+	var j = 6;
 	
-	//for displaying the results//
-	var resultText = document.getElementById("results");
+	//for displaying the results and the buttons//
+	var resultText = document.getElementById("result");
+	var bodybuilding = document.getElementById("bodybuilding");
+	var recreational = document.getElementById("recreational");
+	var medium = document.getElementById("medium");
 	
 	// counter goes up by 1...added alert to make sure function works//
         function type1Add(){
-		type1_count = type1_count + 1;
-		console.log(type1_count);
+			type1_count = type1_count + 1;
+			console.log(type1_count);
 		//alert("type1count" + type1_count);//
 		
         }
 	//counter goes up by 1 //
         function type2Add(){		
-            	type2_count = type2_count + 1;
-		console.log(type2_count);
+            		type2_count = type2_count + 1;
+			console.log(type2_count);
 		//alert("type2count" + type2_count);//
-				
+	
+	}
+	//function for decreasing the total by one if clicked one of the buttons that doesn't add to type 1 or 2//
+	//the bodybuilding and recreational ones are for one question//
+	bodybuilding.onclick = function bodybuildingpercent();{
+		let q = i - 1
+		let r = j - 1
+	}
+	
+	recreational.onclick = function recreationalpercent();{
+		let q = i - 1
+		let r = j - 1
         }
+	//this medium is for another question//
+	medium.onclick = function mediumpercent();{
+		let q = i - 1
+		let r = j - 1
+	}	
 	//type1 muscle fiber percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
-		function type1Percent(){
+	function type1Percent(){
 		let x = type1_count;
-		let y = (x / 6)*100;
-		console.log(y);
-		//alert("type1percent" + y);//
-		document.getElementById("type1results").innerHTML = "Percentage of Slow Twitch (Type 1) Muscle Fibers =" + y + "%";
+		let y = (x / q)*100;
+			console.log(y);
+		alert("type1percent" + y);
+			document.getElementById("type1results").innerHTML = "Percentage of Slow Twitch (Type 1) Muscle Fibers =" + y + "%";
 				
 	}
 	//type 2 muscle fiber percentage.....added variables to the functions......added counter to make sure it works....added the innerhtml to the function//
 	function type2Percent(){
 		let a = type2_count;
-		let b = (a / 6)*100;
-		console.log(b);
-	        //alert("type2percent" + b)//
-		document.getElementById("type2results").innerHTML = "Percentage of Fast Twitch (type 2) Muscle Fibers =" + b + "%";
-		
+		let b = (a / r)*100;
+			console.log(b);
+	       	alert("type2percent" + b)
+			document.getElementById("type2results").innerHTML = "Percentage of Fast Twitch (Type 2) Muscle Fibers =" + b + "%";
 	}
 	
   </script>
@@ -312,10 +332,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#four" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Powerlifting <br> (gaining strength) </a>
 	
 	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio-->
-	<a href="#four" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Bodybuilding <br> (body building)  </a>
+	<a href="#four" onclick="bodybuildingpercent();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> Bodybuilding <br> (body building)  </a>
 	
 	<!-- Type 1/2 Button....sports results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio-->
-	<a href="#four" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.)  </a>
+	<a href="#four" onclick="recreationalpercent();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.)  </a>
+	
+	<!-- Button Section Added to change the total percentage -->
+	<div id="bodybuilding"></div>
+	<div id="recreational"></div>
+	
 	</div>
 
 </div>
@@ -337,8 +362,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#five" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Low repitions, Heavy Weight </a>
 		
 	<!-- Type 1 and 2 Button....deleted calling both functions becasue it didn't affect total percentage ratio-->
-	<a href="#five" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a>
+	<a href="#five" onclick="mediumpercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a>
 	
+	<!-- Button Section Added to change the total percentage -->
+	<div id="medium"></div>
+		
 	</div>
 
 </div>
