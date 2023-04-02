@@ -42,14 +42,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//starting counters before survey is filled out set to 0//
         var type1_count = 0;
         var type2_count = 0;
-	var i = 6;
-	var j = 6;
+	//var i = 6;//
+	//var j = 6;//
 	
 	//for displaying the results and the buttons//
 	var resultText = document.getElementById("result");
-	var bodybuilding = document.getElementById("bodybuilding");
-	var recreational = document.getElementById("recreational");
-	var medium = document.getElementById("medium");
+	//var bodybuilding = document.getElementById("bodybuilding");//
+	//var recreational = document.getElementById("recreational");//
+	//var medium = document.getElementById("medium");//
 	
 	// counter goes up by 1...added alert to make sure function works//
         function type1Add(){
@@ -65,7 +65,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//alert("type2count" + type2_count);//
 	
 	}
-	//function for decreasing the total by one if clicked one of the buttons that doesn't add to type 1 or 2//
+	
+	/*function for decreasing the total by one if clicked one of the buttons that doesn't add to type 1 or 2//
 	//the bodybuilding and recreational ones are for one question//
 	bodybuilding.onclick = function bodybuildingpercent();{
 		let q = i - 1
@@ -79,8 +80,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//this medium is for another question//
 	medium.onclick = function mediumpercent();{
 		let q = i - 1
-		let r = j - 1
-	}	
+		let r = j - 1 
+	}*/
+	
 	//type1 muscle fiber percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
 	function type1Percent(){
 		let x = type1_count;
@@ -323,7 +325,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- Third Question -->
 	<div id="content" class="w3-container">
-		<p>When you go to the gym, what activity do you perform best in or partake in the most?</p>
+		<p>When you go to the gym, what activity do you or would you perform best in or partake in the most?</p>
 		
 	<!-- Type 1 Button -->	
 	<a href="#four" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Cardio Machines </a>
@@ -331,15 +333,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- Type 2 Button -->	
 	<a href="#four" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Powerlifting <br> (gaining strength) </a>
 	
-	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio-->
+	<!-- Type 1/2 Button....weightlifting results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio
 	<a href="#four" onclick="bodybuildingpercent();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> Bodybuilding <br> (body building)  </a>
 	
-	<!-- Type 1/2 Button....sports results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio-->
+	<!-- Type 1/2 Button....sports results in an increase in both muscle fiber types....deleted calling both functions becasue it didn't affect total percentage ratio
 	<a href="#four" onclick="recreationalpercent();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> Recreational Sports <br> (basketball, football, baseball, volleyball, etc.)  </a>
 	
-	<!-- Button Section Added to change the total percentage -->
-	<div id="bodybuilding"></div>
-	<div id="recreational"></div>
+	<!-- Button Section Added to change the total percentage
+	<div id="bodybuilding"></div> 
+	<div id="recreational"></div> /-->
 	
 	</div>
 
@@ -353,7 +355,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- Fourth Question -->
 	<div id="content" class="w3-container">
-		<p>When you lift weights, how do you typically split the workout load?</p>
+		<p>When you lift weights, which workout load do you perform best with?</p>
 		
 	<!-- Type 1 Button -->	
 	<a href="#five" onclick="type1Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> High repititions, Low Weight </a>
@@ -362,10 +364,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#five" onclick="type2Add();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Low repitions, Heavy Weight </a>
 		
 	<!-- Type 1 and 2 Button....deleted calling both functions becasue it didn't affect total percentage ratio-->
-	<a href="#five" onclick="mediumpercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a>
+	 <a href="#five" onclick="mediumpercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Medium repitions, Medium Weight </a> -->
 	
-	<!-- Button Section Added to change the total percentage -->
-	<div id="medium"></div>
+	<!-- Button Section Added to change the total percentage
+	<div id="medium"></div> -->
 		
 	</div>
 
